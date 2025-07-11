@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Milô Hermann</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --grenat: #800020;
+      --beige: #fdf7f2;
+      --text-dark: #2c2c2c;
+      --text-light: #555;
+      --bg-light: #f4f0ec;
+      --white: #ffffff;
+      --gray: #ccc;
+      --shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+      background: var(--beige);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      padding: 20px 60px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--grenat);
+    }
+
+    .contact-button {
+      background-color: var(--grenat);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    }
+
+    .contact-button:hover {
+      background-color: #a5002a;
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img_prog.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      padding: 0 20px;
+    }
+
+    .hero-content {
+      color: white;
+      max-width: 800px;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    .hero-content h2 {
+      font-size: 56px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 22px;
+      color: #f0f0f0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section {
+      padding: 120px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h2 {
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 50px;
+      color: var(--grenat);
+    }
+
+    .section p {
+      font-size: 20px;
+      text-align: center;
+      color: var(--text-light);
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+
+    .tarif-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: var(--text-dark);
+    }
+
+    .card p {
+      font-size: 17px;
+      color: var(--text-light);
+    }
+
+    .card strong {
+      color: var(--grenat);
+      font-size: 22px;
+      display: block;
+      margin-top: 16px;
+    }
+
+    .img-break {
+      width: 100%;
+      height: 60vh;
+      object-fit: cover;
+      filter: brightness(0.9);
+    }
+
+    footer {
+      background: var(--grenat);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      margin-top: 100px;
+    }
+
+    footer p {
+      font-size: 16px;
+      color: #e0e0e0;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h2 {
+        font-size: 36px;
+      }
+
+      .section h2 {
+        font-size: 32px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Milô Hermann</h1>
+    <a class="contact-button" href="mailto:hermannmilo32@gmail.com">Me contacter</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Rapidité. Facilité. Prix bas</h2>
+      <p>Je donne vie à vos imaginations en créant votre présence en ligne. </p>
+    </div>
+  </section>
+
+  <img class="img-break" src="img_video.jpg" alt="Création numérique">
+
+  <section class="section">
+    <h2>À propos</h2>
+    <p>Je suis un créatif passionné par la création de contenu numérique : montage, design, sites web.</p>
+    <p>Je m'engage à proposer des prestations modernes, rapides et accessibles à tous.</p>
+    <p>Je suis un monteur vidéo et développeur de site vitrine.</p>
+    <p>J’espère que vous pourrez voir à travers ce site le travail que je suis capable de vous fournir, au tarif proposé.</p>
+  </section>
+
+  <section class="section">
+    <h2>📌 Tarifs</h2>
+    <div class="tarif-cards">
+      
+      <div class="card">
+        <h3>🌐</h3>
+        <h3>Site statique</h3>
+        <p>Design responsive et moderne pour votre présence en ligne</p>
+        <p>Livraison normale en 48h</p>
+        <strong>10€</strong>
+      </div>
+      <div class="card">
+        <h3>🌐</h3>
+        <h3>Site dynamique</h3>
+        <p>Un site avec un backend, moderne et intuitive</p>
+        <p>Livraison normale en 72h</p>
+        <strong>20€</strong>
+      </div>
+      <div class="card">
+        <h3>🗄️ Hébergement pour site statique</h3>
+        <p>Prise en charge de l'hébergement des sites statiques.</p>
+        <strong>+5€</strong>
+      </div>
+      <div class="card">
+        <h3>⛅ Hébergement pour site dynamique</h3>
+        <p>Prises en charge de l'hébergement des sites dynamique</p>
+        <strong>+10€</strong>
+      </div>
+      <div class="card">
+        <h3>⚡ Livraison speed</h3>
+        <p>Livraison en 48h pour le site dynamique</p>
+        <p>Ajoutez une option 24h chrono à n’importe quel service</p>
+        <strong>+5€</strong>
+      </div>
+      <div class="card">
+        <h3>🚀 Livraison express en 12h</h3>
+        <p>Livraison en 24h pour le site dynamique</p>
+        <p>Traitement prioritaire avec livraison dans la demi-journée</p>
+        <strong>+8€</strong>
+      </div>
+      <div class="card">
+        <h3>🔥 Livraison ultra en 6h</h3>
+        <p>Livraison en 12h pour le site dynamique</p>
+        <p>Pour les urgences extrêmes — livraison en moins de 6 heures</p>
+        <strong>+12€</strong>
+      </div>
+      <div class="card">
+        <h3>🧑‍💻 Modification de site web</h3>
+        <p>Modifications des sites web (statique ou dynamique) fait par d'autres développeurs ou par moi.</p>
+        <p>Livraison normale : - site statique : 48h - site dynamique : 72h</p>
+        <strong>+15€</strong>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Milô Hermann — Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>
